@@ -10,9 +10,9 @@
   <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.1.1/dist/cdn/beer.min.js"></script>
   <script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@0.1.7/dist/cdn/material-dynamic-colors.min.js"></script>
 </head>
-<body class="dark">
+<body class="light">
 <nav class="left m l">
-  <img src="https://www.beercss.com/favicon.png" class="circle margin">
+  <img src="static/parxfull.jpg" class="circle margin">
   <a>
     <i>event</i>
     <div>Events</div>
@@ -49,50 +49,110 @@
     <i>more_vert</i>
   </a>
 </nav>
+<main class = "responsive max">
+    <form method = "post" action = "/TBD" class="large-padding responsive" id="EventImage" style="background-image:url(https://imgs.search.brave.com/t7Yvrb1hUdpgBGo5uFgr5D00fh3-MYTaJCYpsVW1vQk/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93d3cu/Z2FubmV0dC1jZG4u/Y29tL3ByZXN0by8y/MDIwLzEwLzE4L05M/RUQvYWM5N2VlMTAt/YjhhMy00YTdjLWI1/OWYtNzkxZWRjYjZk/YWE3LUFQMjAyOTI2/NDY0MzQ5MjQuanBn/P2Nyb3A9NTEyMywy/ODgyLHgwLHkyNjAm/d2lkdGg9MzIwMCZo/ZWlnaHQ9MTgwMSZm/b3JtYXQ9cGpwZyZh/dXRvPXdlYnA);">
+        <header class="blur">
+        <nav>
+            <h5 class="max">Event Name</h5>
+        </nav>
+        </header>
+        <article class="large-blur">
+            <div class="grid">
+                <div class="s12 l4">
+                    <div class="field label border">
+                        <input type="number" id="Points" max="9999999" name="Points" required="required" style="clip-path: polygon(0% 0%, 0.75rem 0%, 0.75rem 0.5rem, 3.0625rem 0.5rem, 3.0625rem 0%, 100% 0%, 100% 100%, 0% 100%);">
+                        <label class="active">Points</label>
+                    </div>
+                </div>
+                <div class="s12 l4">
+                    <div class="field label border">
+                        <input type="text" id="EventDescription" name="EventDescription" required="required" style="clip-path: polygon(0% 0%, 0.75rem 0%, 0.75rem 0.5rem, 3.0625rem 0.5rem, 3.0625rem 0%, 100% 0%, 100% 100%, 0% 100%);">
+                        <label class="active">Event Description</label>
+                    </div>
+                </div>
+                <div class="s12 l4">
+                    <div class="field label border">
+                        <input type="date"
+                               name="EventDate"
+                               value="{{.EventDate}}"
+                               id="EventDate"
+                               required="required" style="clip-path: polygon(0% 0%, 0.75rem 0%, 0.75rem 0.5rem, 3.0625rem 0.5rem, 3.0625rem 0%, 100% 0%, 100% 100%, 0% 100%);">
+                        <label class="active">Date</label>
+                    </div>
+                </div>
+                <div class="s12 l4">
+                    <div class="field label border">
+                        <input type="number" id="RoomNumber" max="9999999" name="RoomNumber" style="clip-path: polygon(0% 0%, 0.75rem 0%, 0.75rem 0.5rem, 3.0625rem 0.5rem, 3.0625rem 0%, 100% 0%, 100% 100%, 0% 100%);">
+                        <label class="active">Room Number</label>
+                    </div>
+                </div>
+                <div class="s12 l4">
+                    <div class="field label border">
+                        <input type="text" id="AdvisorNames" name="AdvisorNames" required="required" style="clip-path: polygon(0% 0%, 0.75rem 0%, 0.75rem 0.5rem, 3.0625rem 0.5rem, 3.0625rem 0%, 100% 0%, 100% 100%, 0% 100%);">
+                        <label class="active">Advisor Name(s)</label>
+                    </div>
+                </div>
+                <div class="s12 l4">
+                    <div class="field label border">
+                        <input type="text" id="Location" name="Location" required="required" style="clip-path: polygon(0% 0%, 0.75rem 0%, 0.75rem 0.5rem, 3.0625rem 0.5rem, 3.0625rem 0%, 100% 0%, 100% 100%, 0% 100%);">
+                        <label class="active">Location</label>
+                    </div>
+                </div>
+                <div class="s12 l4">
+                    <div class="field label border">
+                        <input type="text" id="LocationDescription" name="LocationDescription" style="clip-path: polygon(0% 0%, 0.75rem 0%, 0.75rem 0.5rem, 3.0625rem 0.5rem, 3.0625rem 0%, 100% 0%, 100% 100%, 0% 100%);">
+                        <label class="active">Location Description</label>
+                    </div>
+                </div>
+                <div class="s12 l4">
+                    <div class="field label border">
+                        <input type="text" id="Sport" name="Sport" style="clip-path: polygon(0% 0%, 0.75rem 0%, 0.75rem 0.5rem, 3.0625rem 0.5rem, 3.0625rem 0%, 100% 0%, 100% 100%, 0% 100%);">
+                        <label class="active">Sport Name</label>
+                    </div>
+                </div>
+                <div class="s12 l4">
+                    <div class="field label border">
+                        <input type="text" id="SportDescription" name="SportDescription" style="clip-path: polygon(0% 0%, 0.75rem 0%, 0.75rem 0.5rem, 3.0625rem 0.5rem, 3.0625rem 0%, 100% 0%, 100% 100%, 0% 100%);">
+                        <label class="active">Sport Description</label>
+                    </div>
+                </div>
+            </div>
+            <article class = "right-shadow">
+                <div id="list">
+                    <h6 class = "white-text">Attendance</h6>
+                    <div class = "bold helper">Check off every student who attends your event!</div>
+                    <div class="row round">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <span>
+                            </span>
+                        </label>
+                        <div>Student Name; ID Number</div>
+                        <a>
 
-<main class="responsive">
-  <article class="large">
-    <div class = "medium">
+                        </a>
+                    </div>
+                    <div class="row round">
+                        <label class="checkbox">
+                            <input id="StudentAttended" value="true" name="StudentAttended" type="checkbox"
+                                   checked="true">
+                            <span>
+                            </span>
+                        </label>
+                        <div>Student Name; ID Number</div>
+                        <a>
 
-      <h5>Event Name</h5>
-      <form class = "left-align">
-        <div class = "grid large-space">
-            <div>Points</div>
-            <input type="number" id="Points" max="9999999" name="Points"
-                   required="required">
-            <div>Event Description</div>
-            <input type="text" id="EventDescription" name="EventDescription"
-                   required="required">
-            <div>Date</div>
-            <input
-                    type="date"
-                    name="EventDate"
-
-                    id="EventDate"
-                    required="required"/>
-            <div>Room Number</div>
-            <input type="number" id="RoomNumber" max="9999999" name="RoomNumber">
-            <div>Advisor Name(s)</div>
-            <input type="text" id="AdvisorNames" name="AdvisorNames"
-                   required="required">
-            <div>Location</div>
-            <input type="text" id="Location" name="Location"
-                   required="required">
-            <div>Location Description</div>
-            <input type="text" id="LocationDescription" name="LocationDescription">
-            <div>Sport</div>
-            <input type="text" id="Sport" name="Sport">
-            <div>Sport Description</div>
-            <input type="text" id="SportDescription" name="SportDescription">
-          </div>
-          <nav>
-            <button>Remove Event</button>
-            <button>Save</button>
-          </nav>
-        </form>
-        <img src="https://www.beercss.com/beer-and-woman.jpg" class = "responsive absolute right">
-    </div>
-  </article>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <div class = "space"></div>
+            <nav class="left-align">
+                <button type = "reset" class="blur">Remove</button>
+                <button type = "submit" class="blur">Save</button>
+            </nav>
+        </article>
+    </form>
 </main>
 </body>
 </html>

@@ -7,6 +7,9 @@ import (
 )
 
 func main() {
+	//ADD THIS IN TO OTHER FILE
+	fs := http.FileServer(http.Dir("./static"))
+	http.Handle("/static/", http.StripPrefix("/static/", fs))
 
 	http.HandleFunc("/", loginHandler)
 
